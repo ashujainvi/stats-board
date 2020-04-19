@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -10,32 +12,43 @@ html {
 
 body {
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: $font-family-primary, -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: $color-neutral-1;
+    font-size: 14px;
 }
   
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: $font-family-code;
 }
 
-//Links
+// Links
+a {
+    color: $color-off-white;
+}
 a, a:hover, a:visited {
     text-decoration: none;
-    }
+}
 
-//Lists
+// Lists
 ul, ol {
     list-style-type: none;
 }
 
-//Font Sizes
+// Font Sizes
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+h4, h5, h6 {
+    font-weight: 700;
+}
 
 h1 { 
-    font-size: 2.2em; 
+    font-size: 2.2em;
+    font-weight: 800;
 } 
      
 h2 { 

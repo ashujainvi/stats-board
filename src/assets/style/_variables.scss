@@ -1,10 +1,23 @@
 // WEBSITE COLORS
 // vibrant colors
 $color-blue: #4a97ff;
-$color-green: #2ff093;
-$color-yellow: #fff200;
-$color-orange: #fda085;
+$color-blue--dark: #0a0c27;
+$color-green: #06d294;
+$color-purple: #5d26b6;
+$color-pink: #d4188a;
+$color-yellow--light: #fff200;
+$color-yellow--dark: #fdbc2b;
+$color-orange--light: #fda085;
+$color-orange--dark: #fd413c;
 $color-off-white: #efefef;
 $primary-site-color: #4a97ff;
 // neutral colors
+$color-black: #000000;
+$color-neutral-1: #212529;
+$color-neutral-2: #272b2f;
 $color-neutral-3: #333333;
+
+
+// fonts
+$font-family-primary: 'Manrope';
+$font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
