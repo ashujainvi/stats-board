@@ -38,7 +38,6 @@ ul, ol {
 }
 
 // Font Sizes
-
 h1, h2, h3 {
     font-weight: 800;
     color: $color-neutral-e;
@@ -57,20 +56,41 @@ h2 {
 } 
      
 h3 {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    margin: 5px 0;
 } 
      
 h4 {
-    font-size: 1.6em; 
+    font-size: 1.45em; 
 } 
      
 h5 {
-    font-size: 1.4em;
+    font-size: 1.35em;
 }
 
 h6 {
-    font-size: 1.2em;
+    font-size: 1.15em;
 } 
 p {
     font-size: 1em;  
+}
+
+// Button classes 
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.button {
+    padding: 1rem 2rem;
+    color: $color-neutral-e;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.button-primary {
+    background: $color-red;
 }

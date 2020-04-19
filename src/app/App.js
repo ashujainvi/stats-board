@@ -5,9 +5,7 @@ import Header from 'components/header/header.js';
 class App extends React.Component {
   render() {
     return (
-      <div className="site-wrapper">
-        <Header/>
-      </div>
+      <Header/>
     )
   }
 }

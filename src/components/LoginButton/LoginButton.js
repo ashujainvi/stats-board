@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Clock extends React.Component {
+class LoginButton extends React.Component {
     constructor(props) {
         super(props);
         this.state = {date: new Date()};
@@ -22,9 +22,9 @@ class Clock extends React.Component {
     }
     render() {
         return (
-            <p>It is {this.state.date.toLocaleTimeString()}.</p>
+            <button className="button button-primary">{this.state.date.toLocaleTimeString()}</button>
         )
     }
 }
 
-export default Clock;
+export default LoginButton;
