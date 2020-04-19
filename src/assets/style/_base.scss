@@ -49,6 +49,7 @@ h4, h5, h6 {
 
 h1 {
     font-size: 2.2em;
+    margin: 10px 0;
 } 
      
 h2 {
@@ -72,7 +73,8 @@ h6 {
     font-size: 1.15em;
 } 
 p {
-    font-size: 1em;  
+    font-size: 1em;
+    color: $color-neutral-e;
 }
 
 // Button classes 
@@ -93,4 +95,11 @@ button {
 
 .button-primary {
     background: $color-red;
+    font-size: 1.1em;
+}
+
+// COLOR CLASSES 
+
+.color-blue {
+    color: $color-blue;
 }
