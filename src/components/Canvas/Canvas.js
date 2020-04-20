@@ -11,17 +11,16 @@ class Canvas extends React.Component {
         const ctx = canvas.getContext("2d");
 
         window.addEventListener('resize', () => {
-            let windowWidth = window.innerWidth;
-            let windowHeight = window.innerHeight;
+            windowWidth = window.innerWidth;
+            windowHeight = window.innerHeight;
             canvas.width = windowWidth;
             canvas.height = windowHeight;
             initCircles();
         });
         let circlesArray = [];
-
         function initCircles() {
             circlesArray = [];
-            const numberOfCircles = 565;
+            const numberOfCircles = windowWidth > 768 ? 565 : 300;
             for (let i = 0; i <= numberOfCircles; i++) {
                 // circle values for circle class
                 let radius = Math.random() * 3 + 1;
@@ -83,7 +82,9 @@ class Circle {
             y: null
         }
 
-        this.addMouseListener();
+        if (window.innerWidth > 768) {
+            this.addMouseListener();
+        }
     }
 
     draw() {
@@ -106,15 +107,17 @@ class Circle {
         this.x += this.dx;
         this.y += this.dy;
 
-        if (this.mouse.x - this.x < 50 && this.mouse.x - this.x > -50 
-            && this.mouse.y - this.y < 50 && this.mouse.y -this.y > -50) {
-                if (this.radius < this.maxRadius) {
-                    this.radius += 1;
-                }
-        } else if (this.radius > this.minRadius) {
-            this.radius -= 1;
+        if (this.mouse.x) {
+            if (this.mouse.x - this.x < 50 && this.mouse.x - this.x > -50 
+                && this.mouse.y - this.y < 50 && this.mouse.y -this.y > -50) {
+                    if (this.radius < this.maxRadius) {
+                        this.radius += 1;
+                    }
+            } else if (this.radius > this.minRadius) {
+                this.radius -= 1;
+            }
         }
-
+    
         this.draw();
     }
 
