@@ -1,13 +1,13 @@
 //Mobile-first Media Queries
 
 @mixin media-breakpoint-tablet {
-    @media (min-width: media-breakpoint-tablet) {
+    @media (min-width: $media-breakpoint-tablet) {
         @content
     }
 };
 
-@mixin desktop {
-    @media (min-width: media-breakpoint-desktop) {
+@mixin media-breakpoint-desktop {
+    @media (min-width: $media-breakpoint-desktop) {
         @content
     }
 }
