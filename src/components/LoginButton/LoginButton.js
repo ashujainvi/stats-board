@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginButton extends React.Component {
 
     render() {
         return (
-            <button className="button button-primary">Login</button>
+            <Link to="/login">
+                <button className="button button-primary">Login</button>
+            </Link>
         )
     }
 }

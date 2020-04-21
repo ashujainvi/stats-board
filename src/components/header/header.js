@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.scss';
+import './Header.scss';
 import logo from 'assets/images/stats-board-logo.svg';
 import LoginButton from 'components/LoginButton/LoginButton.js';
 

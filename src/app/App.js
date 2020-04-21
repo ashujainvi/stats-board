@@ -1,15 +1,25 @@
 import React from 'react';
 import './App.scss';
-import Header from 'components/header/header.js';
+import Header from 'components/Header/Header.js';
 import Hero from 'components/Hero/Hero.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
-      <section>
+      <Router>
         <Header/>
-        <Hero/>
-      </section>
+        <Switch>
+          <Route exact path="/">
+            <Hero/>
+          </Route>
+        </Switch>
+      </Router>
+      
     )
   }
 }
