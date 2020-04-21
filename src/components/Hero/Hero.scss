@@ -1,10 +1,15 @@
 @import '../../assets/style/variables';
+@import '../../assets/style/mixins';
 
 .hero-container {
     margin: 60px auto 10px;
-    padding: 60px;
+    padding: 20px;
     text-align: center;
     max-width: $container-max-width;
+    
+    @include media-breakpoint-tablet {
+        padding: 60px;
+    }
 
     p {
         max-width: 80%;
