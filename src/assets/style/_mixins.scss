@@ -1,0 +1,17 @@
+//Mobile-first Media Queries
+
+//Breakpoints
+$tablet: (min-width: 768px);
+$desktop: (min-width: 992px);
+
+@mixin tablet {
+    @media (tablet) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media (desktop) {
+        @content
+    }
+}
