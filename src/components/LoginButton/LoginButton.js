@@ -1,28 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LoginButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {date: new Date()};
-    }
 
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-          );
-    }
-  
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-
-    tick() {
-        this.setState({ date: new Date()});
-    }
     render() {
         return (
-            <button className="button button-primary">{this.state.date.toLocaleTimeString()}</button>
+            <Link to="/login">
+                <button className="button button-primary">Login</button>
+            </Link>
         )
     }
 }

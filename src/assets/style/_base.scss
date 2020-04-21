@@ -86,11 +86,13 @@ button {
 .button {
     padding: 1rem 2rem;
     color: $color-neutral-e;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     border-radius: 4px;
 
     &:hover {
         cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-primary;
     }
 }
 
