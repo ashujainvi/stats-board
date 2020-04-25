@@ -1,34 +1,98 @@
-// WEBSITE COLORS
-// vibrant colors
-$color-blue: #4a97ff;
-$color-blue--dark: #0a0c27;
-$color-green: #06d294;
+// COLORS
+// vibrant colors - do not reference these directly
+// This naming convention is based on - https://material.io/design/color/the-color-system.html
+// XXX - main, > XXX- dark, < XXX - light
+// light blue
+$color-light-blue-300: #73b8ff;
+$color-light-blue-500: #4a97ff; // main
+$color-light-blue-700: #4377dc;
+// red
+$color-red-300: #eb7578;
+$color-red-500: #fd413c; // main
+$color-red-700: #db2e34;
+// green
+$color-light-green-100: #b1ecd1;
+$color-light-green-300: #06d294;
+$color-light-green-600: #00ab5c;
+// yellow
+$color-yellow-400: #ffe852;
+$color-yello-600: #ffd231; // main
+$color-yellow-700: #fdbc2b;
+// pink
+$color-pink-200: #db89be;
+$color-pink-400: #cc3590; // main
+$color-pink-600: #b90075;
+// others
+$color-blue: #0a0c27;
 $color-purple: #5d26b6;
-$color-pink: #d4188a;
-$color-yellow--light: #fff200;
-$color-yellow--dark: #fdbc2b;
-$color-orange--light: #fda085;
-$color-red: #fd413c;
-$primary-site-color: #4a97ff;
-// neutral colors for each spectrum
+$color-orange: #fda085;
+
+// neutral colors
 $color-black: #000000;
-$color-neutral-1: #212529;
-$color-neutral-2: #272b2f;
-$color-neutral-3: #333333;
-$color-neutral-e: #efefef;
+$color-neutral-900A: #1e2226;
+$color-neutral-900B: #272b2f;
+$color-neutral-800: #3f4348;
+$color-neutral-700: #5d6267;
+$color-neutral-600: #71767b;
+$color-neutral-500: #9a9fa5;
+$color-neutral-400: #b9bec4;
+$color-neutral-300: #dce1e7;
+$color-neutral-200: #eaeff5;
+$color-neutral-100: #f0f6fc;
+$color-neutral-50: #f5fbff;
 
-// WEBSITE FONTS
-$font-family-primary: 'Manrope';
-$font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
+// GRADIENT COLORS
+$color-gradient-red: linear-gradient(
+  360deg,
+  $color-red-500 0%,
+  $color-red-700 100%
+);
+$color-gradient-blue: linear-gradient(
+  360deg,
+  $color-light-blue-500 0%,
+  $color-light-blue-700 100%
+);
 
-// WEBSITE BOX CONTENTS
+// PRIMARY & SECONDARY COLORS (use vibrant color pallette)
+// primary colors
+$color-primary: $color-red-500;
+$color-primary-light: $color-red-300;
+$color-primary-dark: $color-red-700;
+// secondary colors
+$color-secondary: $color-light-blue-500;
+$color-secondary-light: $color-light-blue-300;
+$color-secondary-dark: $color-light-blue-700;
+
+// BACKGROUND & SURFACE COLORS
+$color-background-primary: $color-neutral-900A;
+$color-surface-primary-dark: $color-neutral-900A;
+$color-surface-primary: $color-neutral-900B;
+$color-surface-primary-light: $color-neutral-800;
+$color-surface-blue: $color-light-blue-700;
+// error
+$color-surface-error: $color-red-700;
+
+// ON (TEXT) COLORS
+$color-text-primary: $color-neutral-100;
+$color-text-light-blue: $color-light-blue-500;
+
+// ELEMENTS COLORS (only use color variables)
+// button color
+$color-button-primary: $color-gradient-red;
+$color-button-secondary: $color-gradient-blue;
+// input colors
+$color-input-outline: $color-primary-light;
+
+// FONTS
+$font-family-primary: "Manrope";
+$font-family-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+
+// BOX CONTENTS
 $container-max-width: 1100px;
 
-
-// WEBSITE BREAKPOINTS
+// BREAKPOINTS
 $media-breakpoint-tablet: 768px;
 $media-breakpoint-desktop: 992px;
 
-// WEBSITE BOX SHADOW
+// BOX SHADOW
 $box-shadow-primary: 0 20px 30px -10px rgba(5, 5, 5, 0.7);
-
