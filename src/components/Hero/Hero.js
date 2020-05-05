@@ -1,11 +1,15 @@
 import React from "react";
 import "./Hero.scss";
 import { Link } from "react-router-dom";
+// components
+import CircleCanvas from "components/Canvas/CirclesCanvas/CircleCanvas";
 
 class Hero extends React.Component {
   render() {
     return (
       <div className="hero-container">
+        <CircleCanvas />
+        <div className="hero-background"></div>
         <span className="hero-intro color-red">Introducing Statsboard</span>
         <h1>All your data available in one central hub</h1>
         <p>

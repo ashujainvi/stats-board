@@ -6,16 +6,15 @@ import PageSpeed from "pages/dashboard/page-speed/PageSpeed";
 import SideNav from "components/SideNav/SideNav";
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
+    // use dynamic path from 'withRouter' high order component props
     const { path } = this.props.match;
     return (
       <div className="dashboard">
         <SideNav />
         <Switch>
           <Route exact path={path}>
+            {/* overview page is default view for dashboard */}
             <Redirect to={`${path}/overview`} />
           </Route>
           <Route path={`${path}/overview`}>

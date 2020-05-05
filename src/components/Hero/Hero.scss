@@ -11,6 +11,19 @@
   max-width: $container-max-width;
   text-align: center;
 
+  .hero-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-image: $foreground-gradient-red,
+      url("../../assets/images/hero-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   @include media-breakpoint-tablet {
     padding: 60px;
   }
@@ -19,6 +32,7 @@
     font-size: 0.8em;
     letter-spacing: 0.5em;
     text-transform: uppercase;
+    margin: 10px 0;
   }
 
   h1 {

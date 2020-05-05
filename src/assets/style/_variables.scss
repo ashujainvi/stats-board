@@ -11,6 +11,7 @@ $color-red-300a: #9135394f;
 $color-red-300: #eb7578;
 $color-red-500: #fd413c; // main
 $color-red-700: #db2e34;
+$color-red-700a: #db2e3485;
 // green
 $color-light-green-100: #b1ecd1;
 $color-light-green-300: #06d294;
@@ -24,12 +25,14 @@ $color-pink-200: #db89be;
 $color-pink-400: #cc3590; // main
 $color-pink-600: #b90075;
 // others
-$color-blue: #0a0c27;
+$color-blue-900a: #100d32cf;
+$color-blue-900: #0a0c27;
 $color-purple: #5d26b6;
 $color-orange: #fda085;
 
 // neutral colors
 $color-black: #050505;
+$color-neutral-900Aa: #101218cb;
 $color-neutral-900A: #101218;
 $color-neutral-900B: #151a1f;
 $color-neutral-900C: #1d2326;
@@ -42,18 +45,6 @@ $color-neutral-300: #dce1e7;
 $color-neutral-200: #eaeff5;
 $color-neutral-100: #f0f6fc;
 $color-neutral-50: #f5fbff;
-
-// GRADIENT COLORS
-$color-gradient-red: linear-gradient(
-  360deg,
-  $color-red-500 0%,
-  $color-red-700 100%
-);
-$color-gradient-blue: linear-gradient(
-  360deg,
-  $color-light-blue-500 0%,
-  $color-light-blue-700 100%
-);
 
 // PRIMARY & SECONDARY COLORS (use vibrant color pallette)
 // primary colors
@@ -75,6 +66,25 @@ $color-surface-blue: $color-light-blue-700;
 $color-surface-red-transparent: $color-red-300a;
 // error
 $color-surface-error: $color-red-300a;
+
+// GRADIENT COLORS
+$color-gradient-red: linear-gradient(
+  360deg,
+  $color-red-500 0%,
+  $color-red-700 100%
+);
+$color-gradient-blue: linear-gradient(
+  360deg,
+  $color-light-blue-500 0%,
+  $color-light-blue-700 100%
+);
+
+// background/foregrounds
+$foreground-gradient-red: linear-gradient(
+  120deg,
+  $color-blue-900a 0%,
+  $color-red-700a 100%
+);
 
 // ON (TEXT) COLORS
 $color-text-primary: $color-neutral-100;
@@ -100,4 +110,4 @@ $media-breakpoint-tablet: 768px;
 $media-breakpoint-desktop: 992px;
 
 // BOX SHADOW
-$box-shadow-primary: 0 20px 30px -10px rgba(5, 5, 5, 0.7);
+$box-shadow-primary: 0 20px 30px -10px $color-neutral-900Aa;

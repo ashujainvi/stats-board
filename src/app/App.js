@@ -38,7 +38,7 @@ class App extends React.Component {
             {this.props.user.isAuth ? <Redirect to="/dashboard" /> : <Signup />}
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            {!this.props.user.isAuth ? <Redirect to="/login" /> : <Dashboard />}
           </Route>
         </Switch>
       </Router>
