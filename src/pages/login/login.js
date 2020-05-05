@@ -1,13 +1,15 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-
+// Redux
+import { connect } from "react-redux";
+import { setAuth } from "redux/actions/userActions";
 import "./login.scss";
 //components
 import Canvas from "components/Canvas/Canvas";
 import ErrorCard from "components/ErrorCard/ErrorCard";
 //assets
 import bgImage from "assets/images/login-background.jpg";
-// services
+// services & context
 import CommonHTTP from "services/common-http";
 class Login extends React.Component {
   http = new CommonHTTP();
@@ -48,6 +50,7 @@ class Login extends React.Component {
           });
         } else {
           localStorage.setItem("FBTokenId", `Bearer ${res.data.token}`);
+          this.props.setAuth(true);
           this.props.history.push("/dashboard");
         }
       })
@@ -68,7 +71,7 @@ class Login extends React.Component {
         </div>
         <Canvas />
         <form noValidate className="card login-form">
-          <h2>Login to you account!</h2>
+          <h2>Login to you account</h2>
           <p>Use your email to login</p>
           {error.error ? <ErrorCard error={error} /> : null}
           <input
@@ -95,8 +98,9 @@ class Login extends React.Component {
             {loading ? "Loggin in" : "Log in"}
           </button>
           <small>
+            {/* prettier-ignore */}
             Dont have an account?
-            <Link className="color-blue" to="/signup">
+            <Link className="color-red" to="/signup">
               Sign Up
             </Link>
           </small>
@@ -106,4 +110,14 @@ class Login extends React.Component {
   }
 }
 
-export default withRouter(Login);
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+const mapActionsToProps = {
+  setAuth,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(withRouter(Login));

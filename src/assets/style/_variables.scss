@@ -5,8 +5,9 @@
 // light blue
 $color-light-blue-300: #73b8ff;
 $color-light-blue-500: #4a97ff; // main
-$color-light-blue-700: #4377dc;
+$color-light-blue-700: #376dd8;
 // red
+$color-red-300a: #9135394f;
 $color-red-300: #eb7578;
 $color-red-500: #fd413c; // main
 $color-red-700: #db2e34;
@@ -28,14 +29,15 @@ $color-purple: #5d26b6;
 $color-orange: #fda085;
 
 // neutral colors
-$color-black: #000000;
-$color-neutral-900A: #1e2226;
-$color-neutral-900B: #272b2f;
-$color-neutral-800: #3f4348;
-$color-neutral-700: #5d6267;
-$color-neutral-600: #71767b;
-$color-neutral-500: #9a9fa5;
-$color-neutral-400: #b9bec4;
+$color-black: #050505;
+$color-neutral-900A: #101218;
+$color-neutral-900B: #151a1f;
+$color-neutral-900C: #1d2326;
+$color-neutral-800: #2d3137;
+$color-neutral-700: #545c63;
+$color-neutral-600: #6b7580;
+$color-neutral-500: #8e99a7;
+$color-neutral-400: #b6bdc6;
 $color-neutral-300: #dce1e7;
 $color-neutral-200: #eaeff5;
 $color-neutral-100: #f0f6fc;
@@ -64,17 +66,20 @@ $color-secondary-light: $color-light-blue-300;
 $color-secondary-dark: $color-light-blue-700;
 
 // BACKGROUND & SURFACE COLORS
-$color-background-primary: $color-neutral-900A;
+$color-background-primary-dark: $color-neutral-900A;
+$color-background-primary: $color-neutral-900B;
 $color-surface-primary-dark: $color-neutral-900A;
 $color-surface-primary: $color-neutral-900B;
-$color-surface-primary-light: $color-neutral-800;
+$color-surface-primary-light: $color-neutral-900C;
 $color-surface-blue: $color-light-blue-700;
+$color-surface-red-transparent: $color-red-300a;
 // error
-$color-surface-error: $color-red-700;
+$color-surface-error: $color-red-300a;
 
 // ON (TEXT) COLORS
 $color-text-primary: $color-neutral-100;
 $color-text-light-blue: $color-light-blue-500;
+$color-text-red: $color-primary;
 
 // ELEMENTS COLORS (only use color variables)
 // button color

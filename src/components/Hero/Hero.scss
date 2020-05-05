@@ -1,22 +1,35 @@
-@import '../../assets/style/variables';
-@import '../../assets/style/mixins';
+@import "../../assets/style/variables";
+@import "../../assets/style/mixins";
 
 .hero-container {
-    margin: 60px auto 10px;
-    padding: 20px;
-    text-align: center;
-    max-width: $container-max-width;
-    
-    @include media-breakpoint-tablet {
-        padding: 60px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 10px;
+  padding: 20px;
+  max-width: $container-max-width;
+  text-align: center;
 
-    p {
-        max-width: 80%;
-        margin: 5px auto;
-    }
+  @include media-breakpoint-tablet {
+    padding: 60px;
+  }
 
-    button {
-        margin: 20px auto;
-    }
+  .hero-intro {
+    font-size: 0.8em;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 70%;
+  }
+  p {
+    max-width: 80%;
+    margin: 5px auto;
+  }
+
+  button {
+    margin: 20px auto;
+  }
 }

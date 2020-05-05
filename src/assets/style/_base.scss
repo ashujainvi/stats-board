@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 * {
   margin: 0;
@@ -17,15 +18,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $color-background-primary;
+  background: $color-background-primary-dark;
   color: $color-text-primary;
   font-size: 14px;
 }
-
-code {
-  font-family: $font-family-code;
-}
-
 // Links
 a {
   color: $color-text-primary;
@@ -46,9 +42,9 @@ ol {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.5px;
   font-weight: 800;
   color: $color-text-primary;
+  margin: 5px 0;
 }
 
 h4,
@@ -59,36 +55,56 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.2em;
+  letter-spacing: -0.55px;
   margin: 10px 0;
+
+  @include media-breakpoint-tablet {
+    font-size: 2.8em;
+  }
 }
 
 h2 {
   font-size: 2em;
+  letter-spacing: -0.5px;
+  margin: 10px 0;
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1.52em;
+  letter-spacing: -0.4px;
   margin: 5px 0;
 }
 
 h4 {
-  font-size: 1.45em;
-}
-
-h5 {
   font-size: 1.35em;
 }
 
+h5 {
+  font-size: 1.25em;
+}
+
 h6 {
-  font-size: 1.15em;
+  font-size: 1em;
 }
 p {
-  font-size: 1em;
+  font-size: 1.05em;
   color: $color-text-primary;
 }
 
 // input
+// override autofill colors for input
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: 1px solid $color-input-outline;
+  -webkit-box-shadow: 0 0 0 30px $color-surface-primary-light inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: $color-text-primary !important;
+}
 input {
   padding: 10px;
   background-color: $color-surface-primary-light;
@@ -136,13 +152,15 @@ button {
 }
 
 // COLOR CLASSES
-
 .color-blue {
   color: $color-text-light-blue;
 }
+.color-red {
+  color: $color-text-red;
+}
 
 .card {
-  border-radius: 6px;
+  border-radius: 14px;
   box-shadow: $box-shadow-primary;
   background: $color-surface-primary;
   padding: 10px;
@@ -155,9 +173,9 @@ button {
   justify-content: center;
   height: 40px;
   background-color: $color-surface-error;
-  color: $color-text-primary;
+  color: $color-text-red;
   font-size: 14px;
   border-radius: 4px;
-  margin: 5px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 12px;
 }

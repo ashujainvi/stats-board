@@ -8,6 +8,7 @@ import ErrorCard from "components/ErrorCard/ErrorCard";
 import bgImage from "assets/images/login-background.jpg";
 // services
 import CommonHTTP from "services/common-http";
+
 class Signup extends React.Component {
   http = new CommonHTTP();
 
@@ -111,7 +112,7 @@ class Signup extends React.Component {
           </button>
           <small>
             Dont have an account?
-            <Link className="color-blue" to="/login">
+            <Link className="color-red" to="/login">
               Log in
             </Link>
           </small>

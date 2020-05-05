@@ -1,46 +1,42 @@
+// React stuff
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
-import jwtDecode from "jwt-decode";
-import "./App.scss";
+// Redux
+import { connect } from "react-redux";
+import { setAuth } from "redux/actions/userActions";
+// components
 import Header from "components/Header/Header";
-
 // Pages
-import home from "pages/home/home";
+import Home from "pages/home/home";
 import Login from "pages/login/login";
 import Signup from "pages/signup/signup";
 import Dashboard from "pages/dashboard/dashboard";
+// services
+import { isUserAuthenticated } from "services/utils";
 
-// auth
-let authenticated;
-const token = localStorage.FBTokenId;
-if (token) {
-  // decode token to get expiration time
-  const decodedToken = jwtDecode(token);
-  if (decodedToken.exp * 1000 < Date.now()) {
-    window.location.href("/login");
-    authenticated = false;
-  } else {
-    authenticated = true;
-  }
-}
 class App extends React.Component {
+  componentDidMount() {
+    this.props.setAuth(isUserAuthenticated());
+  }
   render() {
+    console.log(window.location.href);
     return (
       <Router>
-        <Header authenticated={authenticated} />
+        {this.props.user.isAuth ? null : <Header />}
         <Switch>
-          <Route exact path="/" component={home} />
-          {/* // redirect to home page if already authenticated */}
+          <Route exact path="/">
+            {this.props.user.isAuth ? <Redirect to="/dashboard" /> : <Home />}
+          </Route>
           <Route path="/login">
-            {authenticated ? <Redirect to="/dashboard" /> : <Login />}
+            {this.props.user.isAuth ? <Redirect to="/dashboard" /> : <Login />}
           </Route>
           <Route path="/signup">
-            {authenticated ? <Redirect to="/dashboard" /> : <Signup />}
+            {this.props.user.isAuth ? <Redirect to="/dashboard" /> : <Signup />}
           </Route>
           <Route path="/dashboard">
             <Dashboard />
@@ -51,4 +47,14 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+const mapActionsToProps = {
+  setAuth,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(App);

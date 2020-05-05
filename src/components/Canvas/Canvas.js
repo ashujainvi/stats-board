@@ -3,8 +3,11 @@ import "./Canvas.scss";
 
 let rafTimer;
 class Canvas extends React.Component {
+  canvasRef = React.createRef();
+
   componentDidMount() {
-    const canvas = this.refs.heroCanvas;
+    console.log("mounted");
+    const canvas = this.canvasRef.current;
     let windowWidth = window.innerWidth;
     let windowHeight = window.innerHeight;
     canvas.width = windowWidth;
@@ -23,7 +26,7 @@ class Canvas extends React.Component {
     let circlesArray = [];
     function initCircles() {
       circlesArray = [];
-      const numberOfCircles = windowWidth > 768 ? 565 : 300;
+      const numberOfCircles = windowWidth > 768 ? 420 : 210;
       for (let i = 0; i <= numberOfCircles; i++) {
         // circle values for circle class
         let radius = Math.random() * 3 + 1;
@@ -50,7 +53,7 @@ class Canvas extends React.Component {
 
     // blob for canvas
     const blobConfig = {
-      backgroundColor: "#272b2f",
+      backgroundColor: "#151a1f",
       ctx,
     };
 
@@ -80,7 +83,9 @@ class Canvas extends React.Component {
   }
 
   render() {
-    return <canvas id="canvas" className="canvas" ref="heroCanvas"></canvas>;
+    return (
+      <canvas id="canvas" className="canvas" ref={this.canvasRef}></canvas>
+    );
   }
 }
 
@@ -94,7 +99,7 @@ class Circle {
     this.radius = data.radius;
     this.maxRadius = data.maxRadius || 30;
     this.minRadius = data.minRadius || 2;
-    this.colorRange = data.colorRange || ["#fd413c", "#333333"];
+    this.colorRange = data.colorRange || ["#fd413c", "#1d2326"];
     this.color = this.colorRange[
       Math.floor(Math.random() * this.colorRange.length)
     ];
