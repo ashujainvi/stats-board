@@ -20,6 +20,12 @@ class Hero extends React.Component {
         <Link to="/signup">
           <button className="button button-primary">Get Started</button>
         </Link>
+        <a
+          className="attribution"
+          href="https://www.freepik.com/free-photos-vectors/Background"
+        >
+          Background vector created by brgfx - www.freepik.com
+        </a>
       </div>
     );
   }

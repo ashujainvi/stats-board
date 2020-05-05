@@ -18,24 +18,6 @@ class PageSpeed extends React.Component {
       .runPagespeedTest()
       .then((res) => {
         console.log(res);
-
-        // const lighthouseAuditList = Object.keys(res.lighthouseMetrics).map(
-        //   (key) => {
-        //     return (
-        //       <div>
-        //         <h2>{key}</h2> <p>{res.lighthouseMetrics[key]}</p>
-        //       </div>
-        //     );
-        //   }
-        // );
-
-        // console.log(lighthouseAuditList);
-
-        // for (let key in res.lighthouseMetrics) {
-        //   const p = document.createElement("p");
-        //   p.textContent = `${key}: ${lighthouseMetrics[key]}`;
-        //   document.body.appendChild(p);
-        // }
         this.setState({
           isLoading: false,
           data: res,
