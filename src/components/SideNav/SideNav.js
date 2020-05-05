@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./SideNav.scss";
 import logo from "assets/images/logo.svg";
 import LoginControl from "components/LoginControl/LoginControl.js";
@@ -13,15 +13,27 @@ class SideNav extends React.Component {
         </Link>
 
         <div className="nav-item-container">
-          <Link to="/dashboard" className="nav-item">
+          <NavLink
+            to="/dashboard/overview"
+            className="nav-item"
+            activeClassName="nav-item-active"
+          >
             Overview
-          </Link>
-          <Link to="/dashboard/analytics" className="nav-item">
+          </NavLink>
+          <NavLink
+            to="/dashboard/analytics"
+            className="nav-item"
+            activeClassName="nav-item-active"
+          >
             Analytics
-          </Link>
-          <Link to="/dashboard/pagespeed" className="nav-item">
+          </NavLink>
+          <NavLink
+            to="/dashboard/pagespeed"
+            className="nav-item"
+            activeClassName="nav-item-active"
+          >
             Page Speed
-          </Link>
+          </NavLink>
         </div>
         <LoginControl />
       </nav>

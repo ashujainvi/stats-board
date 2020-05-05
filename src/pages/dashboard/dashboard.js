@@ -1,24 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import "./dashboard.scss";
 // components
-import Login from "pages/login/login";
 import PageSpeed from "pages/dashboard/page-speed/PageSpeed";
 import SideNav from "components/SideNav/SideNav";
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const { path } = this.props.match;
     return (
       <div className="dashboard">
         <SideNav />
         <Switch>
-          <Route exact path="/dashboard">
-            <Login />
+          <Route exact path={path}>
+            <Redirect to={`${path}/overview`} />
           </Route>
-          <Route path="/dashboard/analytics">
+          <Route path={`${path}/overview`}>
+            <h1>overview</h1>
+          </Route>
+          <Route path={`${path}/analytics`}>
             <h1>I'm analytics</h1>
           </Route>
-          <Route path="/dashboard/pagespeed">
+          <Route path={`${path}/pagespeed`}>
             <PageSpeed />
           </Route>
         </Switch>
@@ -27,4 +33,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

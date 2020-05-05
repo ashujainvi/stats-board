@@ -29,9 +29,19 @@
     .nav-item {
       margin: 8px 0;
       padding: 10px;
+      border-radius: 6px;
+      background: $color-surface-primary;
 
       &:hover {
         filter: brightness(200%);
+      }
+
+      &-active {
+        background: $color-surface-primary-dark;
+
+        &:hover {
+          filter: none;
+        }
       }
     }
   }

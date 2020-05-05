@@ -24,7 +24,6 @@ class App extends React.Component {
     this.props.setAuth(isUserAuthenticated());
   }
   render() {
-    console.log(window.location.href);
     return (
       <Router>
         {this.props.user.isAuth ? null : <Header />}
