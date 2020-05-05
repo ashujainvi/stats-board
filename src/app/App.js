@@ -24,7 +24,6 @@ class App extends React.Component {
     this.props.setAuth(isUserAuthenticated());
   }
   render() {
-    console.log(window.location.href);
     return (
       <Router>
         {this.props.user.isAuth ? null : <Header />}
@@ -39,7 +38,7 @@ class App extends React.Component {
             {this.props.user.isAuth ? <Redirect to="/dashboard" /> : <Signup />}
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            {!this.props.user.isAuth ? <Redirect to="/login" /> : <Dashboard />}
           </Route>
         </Switch>
       </Router>

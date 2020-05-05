@@ -5,6 +5,10 @@ import { connect } from "react-redux";
 import { setAuth } from "redux/actions/userActions";
 
 class LoginControl extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   handleLogout = (event) => {
     event.preventDefault();
     localStorage.removeItem("FBTokenId");
@@ -13,13 +17,22 @@ class LoginControl extends React.Component {
   };
   render() {
     const isLoggedIn = this.props.user.isAuth;
+    const isUserOnLoginPage = this.props.location.pathname === "/login";
     let button;
     if (!isLoggedIn) {
-      button = (
-        <Link to="/login">
-          <button className="button button-primary">Login</button>
-        </Link>
-      );
+      if (!isUserOnLoginPage) {
+        button = (
+          <Link to="/login">
+            <button className="button button-primary">Login</button>
+          </Link>
+        );
+      } else {
+        button = (
+          <Link to="/signup">
+            <button className="button button-primary">Signup</button>
+          </Link>
+        );
+      }
     } else {
       button = (
         <button className="button button-primary" onClick={this.handleLogout}>
