@@ -1,108 +1,181 @@
-@import './variables';
+@import "./variables";
+@import "./mixins";
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: $font-family-primary, -apple-system, BlinkMacSystemFont, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: $color-neutral-1;
-    color: $color-neutral-e;
-    font-size: 14px;
+  box-sizing: border-box;
+  font-family: $font-family-primary, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-background-primary-dark;
+  color: $color-text-primary;
+  font-size: 14px;
 }
-  
-code {
-    font-family: $font-family-code;
-}
-
 // Links
 a {
-    color: $color-neutral-e;
+  color: $color-text-primary;
 }
-a, a:hover, a:visited {
-    text-decoration: none;
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
 }
 
 // Lists
-ul, ol {
-    list-style-type: none;
+ul,
+ol {
+  list-style-type: none;
 }
 
 // Font Sizes
-h1, h2, h3 {
-    font-weight: 800;
-    color: $color-neutral-e;
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  color: $color-text-primary;
+  margin: 5px 0;
 }
 
-h4, h5, h6 {
-    font-weight: 700;
+h4,
+h5,
+h6 {
+  letter-spacing: -0.55px;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 2.2em;
-    margin: 10px 0;
-} 
-     
+  font-size: 2.2em;
+  letter-spacing: -0.55px;
+  margin: 10px 0;
+
+  @include media-breakpoint-tablet {
+    font-size: 2.8em;
+  }
+}
+
 h2 {
-    font-size: 2.0em;
-} 
-     
+  font-size: 2em;
+  letter-spacing: -0.5px;
+  margin: 10px 0;
+}
+
 h3 {
-    font-size: 1.6em;
-    margin: 5px 0;
-} 
-     
+  font-size: 1.52em;
+  letter-spacing: -0.4px;
+  margin: 5px 0;
+}
+
 h4 {
-    font-size: 1.45em; 
-} 
-     
+  font-size: 1.35em;
+}
+
 h5 {
-    font-size: 1.35em;
+  font-size: 1.25em;
 }
 
 h6 {
-    font-size: 1.15em;
-} 
+  font-size: 1em;
+}
 p {
-    font-size: 1em;
-    color: $color-neutral-e;
+  font-size: 1.05em;
+  color: $color-text-primary;
 }
 
-// Button classes 
+// input
+// override autofill colors for input
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: 1px solid $color-input-outline;
+  -webkit-box-shadow: 0 0 0 30px $color-surface-primary-light inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: $color-text-primary !important;
+}
+input {
+  padding: 10px;
+  background-color: $color-surface-primary-light;
+  color: $color-text-primary;
+  margin: 8px 0;
+  font-size: inherit;
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid $color-input-outline;
+  }
+}
+
+// Button classes
 button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .button {
-    padding: 1rem 2rem;
-    color: $color-neutral-e;
-    transition: all 0.1s ease;
-    border-radius: 4px;
+  padding: 1rem 2rem;
+  color: $color-text-primary;
+  transition: all 0.1s ease;
+  border-radius: 4px;
 
-    &:hover {
-        cursor: pointer;
-        transform: translateY(-2px);
-        box-shadow: $box-shadow-primary;
-    }
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: $box-shadow-primary;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    box-shadow: none;
+  }
 }
 
 .button-primary {
-    background: $color-red;
-    font-size: 1.1em;
+  background: $color-button-primary;
+  font-size: 1.1em;
 }
 
-// COLOR CLASSES 
+.button-secondary {
+  background: $color-button-secondary;
+  font-size: 1em;
+}
 
+// COLOR CLASSES
 .color-blue {
-    color: $color-blue;
+  color: $color-text-light-blue;
+}
+.color-red {
+  color: $color-text-red;
+}
+
+.card {
+  border-radius: 14px;
+  box-shadow: $box-shadow-primary;
+  background: $color-surface-primary;
+  padding: 10px;
+}
+
+// ERRORS
+.server-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: $color-surface-error;
+  color: $color-text-red;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 12px;
 }
