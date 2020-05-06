@@ -1,18 +1,20 @@
 @import "assets/style/variables";
+@import "assets/style/mixins";
 
 .side-nav {
   height: 100vh;
   position: sticky;
   top: 0;
   left: 0;
-  width: 24%;
-  min-width: 210px;
-  max-width: 275px;
+  width: 210px;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
   background: $color-surface-primary;
 
+  @include media-breakpoint-tablet {
+    width: 280px;
+  }
   .app-logo {
     width: 60px;
     pointer-events: none;
