@@ -2,8 +2,10 @@ import React from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 import "./Dashboard.scss";
 // components
-import PageSpeed from "app/pages/Dashboard/PageSpeed/PageSpeed";
 import SideNav from "app/pages/Dashboard/SideNav/SideNav";
+import Analytics from "app/pages/Dashboard/Analytics/Analytics";
+import Overview from "app/pages/Dashboard/Overview/Overview";
+import PageSpeed from "app/pages/Dashboard/PageSpeed/PageSpeed";
 
 class Dashboard extends React.Component {
   render() {
@@ -18,10 +20,10 @@ class Dashboard extends React.Component {
             <Redirect to={`${path}/overview`} />
           </Route>
           <Route path={`${path}/overview`}>
-            <h1>overview</h1>
+            <Overview />
           </Route>
           <Route path={`${path}/analytics`}>
-            <h1>I'm analytics</h1>
+            <Analytics />
           </Route>
           <Route path={`${path}/pagespeed`}>
             <PageSpeed />

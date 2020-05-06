@@ -1,6 +1,10 @@
 @import "assets/style/variables";
 
 .welcome-card {
+  .card {
+    display: flex;
+  }
+
   display: flex;
   padding: 50px;
   width: 85%;

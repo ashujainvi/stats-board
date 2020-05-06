@@ -28,12 +28,12 @@
 
     .nav-item {
       margin: 8px 0;
-      padding: 10px;
+      padding: 20px 15px;
       border-radius: 6px;
       background: $color-surface-primary;
 
       &:hover {
-        filter: brightness(200%);
+        filter: brightness(150%);
       }
 
       &-active {
