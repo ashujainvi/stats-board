@@ -1,0 +1,52 @@
+@import "assets/style/variables";
+@import "assets/style/mixins";
+
+.page-speed {
+  display: flex;
+  width: 100%;
+  padding: 10px 35px;
+  flex-direction: column;
+
+  .card {
+    display: flex;
+  }
+
+  .heading {
+    margin: 40px 0;
+  }
+
+  .performance-results {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    max-width: 90%;
+
+    .metrics-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .metrics-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        width: 22.5%;
+        max-width: 270px;
+        margin: 15px 30px 15px 0;
+        padding: 30px;
+
+        .time-circle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 14px;
+          width: 26px;
+          height: 26px;
+          border-radius: 100%;
+          background: $color-surface-red-transparent;
+        }
+      }
+    }
+  }
+}
