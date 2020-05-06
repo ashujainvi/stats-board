@@ -1,0 +1,17 @@
+@import "assets/style/variables";
+
+.header {
+  height: 60px;
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .app-logo {
+    width: 65px;
+    pointer-events: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+}

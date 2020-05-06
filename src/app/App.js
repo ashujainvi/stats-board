@@ -8,16 +8,16 @@ import {
 } from "react-router-dom";
 // Redux
 import { connect } from "react-redux";
-import { setAuth } from "redux/actions/userActions";
+import { setAuth } from "app/redux/actions/userActions";
 // components
-import Header from "components/Header/Header";
+import Header from "app/shared/components/Header/Header";
 // Pages
-import Home from "pages/home/home";
-import Login from "pages/login/login";
-import Signup from "pages/signup/signup";
-import Dashboard from "pages/dashboard/dashboard";
+import Home from "app/pages/Home/Home";
+import Login from "app/pages/Login/Login";
+import Signup from "app/pages/Signup/Signup";
+import Dashboard from "app/pages/Dashboard/Dashboard";
 // services
-import { isUserAuthenticated } from "services/utils";
+import { isUserAuthenticated } from "app/shared/services/utils";
 
 class App extends React.Component {
   componentDidMount() {
