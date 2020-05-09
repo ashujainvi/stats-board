@@ -7,11 +7,9 @@ import ErrorCard from "app/shared/components/ErrorCard/ErrorCard";
 //assets
 import bgImage from "assets/images/login-background.jpg";
 // services
-import CommonHTTP from "app/shared/services/common-http";
+import { signupHttp } from "app/shared/services/common-http";
 
 class Signup extends React.Component {
-  http = new CommonHTTP();
-
   constructor() {
     super();
     this.state = {
@@ -41,8 +39,7 @@ class Signup extends React.Component {
       confirmPassword: this.state.confirmPassword,
       nickName: this.state.nickName,
     };
-    this.http
-      .signup(userData)
+    signupHttp(userData)
       .then((res) => {
         if (Object.keys(res.data).includes("error")) {
           this.setState({ error: res.data, loading: false });

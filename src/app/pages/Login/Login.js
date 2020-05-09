@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
+
 // Redux
 import { connect } from "react-redux";
 import { setAuth } from "app/redux/actions/userActions";
@@ -10,10 +12,9 @@ import ErrorCard from "app/shared/components/ErrorCard/ErrorCard";
 //assets
 import bgImage from "assets/images/login-background.jpg";
 // services & context
-import CommonHTTP from "app/shared/services/common-http";
+import { loginHttp } from "app/shared/services/common-http";
+import Axios from "axios";
 class Login extends React.Component {
-  http = new CommonHTTP();
-
   constructor() {
     super();
     this.state = {
@@ -39,8 +40,7 @@ class Login extends React.Component {
       email: this.state.email,
       password: this.state.password,
     };
-    this.http
-      .login(userData)
+    loginHttp(userData)
       .then((res) => {
         console.log(res);
         if (Object.keys(res.data).includes("error")) {
@@ -49,7 +49,9 @@ class Login extends React.Component {
             loading: false,
           });
         } else {
-          localStorage.setItem("FBTokenId", `Bearer ${res.data.token}`);
+          const FBTokenId = `Bearer ${res.data.token}`;
+          localStorage.setItem("FBTokenId", FBTokenId);
+          axios.defaults.headers.common["Authorization"] = FBTokenId;
           this.props.setAuth(true);
           this.props.history.push("/dashboard");
         }

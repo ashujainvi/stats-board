@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   width: 210px;
-  padding: 0 30px;
+  padding: 0 25px;
   display: flex;
   flex-direction: column;
   background: $color-surface-primary;
@@ -30,7 +30,7 @@
 
     .nav-item {
       margin: 8px 0;
-      padding: 20px 15px;
+      padding: 15px;
       border-radius: 6px;
       background: $color-surface-primary;
 
@@ -40,6 +40,7 @@
 
       &-active {
         background: $color-surface-primary-dark;
+        color: $color-text-red;
 
         &:hover {
           filter: none;

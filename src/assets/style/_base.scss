@@ -162,11 +162,36 @@ button {
   color: $color-text-red;
 }
 
+// SURFACES
 .card {
   border-radius: 14px;
   box-shadow: $box-shadow-primary;
   background: $color-surface-primary;
   padding: 10px;
+}
+
+.card-circle-red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 15px;
+  border: 5px solid $color-primary;
+  background: $color-surface-red-transparent;
+}
+
+.card-circle-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 15px;
+  border: 5px solid $color-light-green-600;
+  background: $color-surface-green-transparent;
 }
 
 // ERRORS

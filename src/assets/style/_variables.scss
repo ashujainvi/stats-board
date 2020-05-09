@@ -16,6 +16,7 @@ $color-red-700a: #db2e3485;
 $color-light-green-100: #b1ecd1;
 $color-light-green-300: #06d294;
 $color-light-green-600: #00ab5c;
+$color-light-green-600a: #04b36176;
 // yellow
 $color-yellow-400: #ffe852;
 $color-yello-600: #ffd231; // main
@@ -33,9 +34,9 @@ $color-orange: #fda085;
 // neutral colors
 $color-black: #050505;
 $color-neutral-900Aa: #101218cb;
-$color-neutral-900A: #101218;
-$color-neutral-900B: #151a1f;
-$color-neutral-900C: #1d2326;
+$color-neutral-900A: #101418;
+$color-neutral-900B: #12181c;
+$color-neutral-900C: #13191d;
 $color-neutral-800: #2d3137;
 $color-neutral-700: #545c63;
 $color-neutral-600: #6b7580;
@@ -64,30 +65,35 @@ $color-surface-primary: $color-neutral-900B;
 $color-surface-primary-light: $color-neutral-900C;
 $color-surface-blue: $color-light-blue-700;
 $color-surface-red-transparent: $color-red-300a;
+$color-surface-green-transparent: $color-light-green-600a;
 // error
 $color-surface-error: $color-red-300a;
 
 // GRADIENT COLORS
 $color-gradient-red: linear-gradient(
-  360deg,
+  240deg,
   $color-red-500 0%,
-  $color-red-700 100%
+  $color-red-700 80%
 );
 $color-gradient-blue: linear-gradient(
-  360deg,
+  240deg,
   $color-light-blue-500 0%,
-  $color-light-blue-700 100%
+  $color-light-blue-700 80%
 );
-
+$color-gradient-gray: linear-gradient(
+  120deg,
+  $color-neutral-900C 0%,
+  $color-neutral-900B 100%
+);
 // background/foregrounds
 $foreground-gradient-red: linear-gradient(
   120deg,
   $color-blue-900a 0%,
-  $color-red-700a 100%
+  $color-red-700a 90%
 );
 
 // ON (TEXT) COLORS
-$color-text-primary: $color-neutral-100;
+$color-text-primary: $color-neutral-300;
 $color-text-primary-dark: $color-neutral-200;
 $color-text-light-blue: $color-light-blue-500;
 $color-text-red: $color-primary;
