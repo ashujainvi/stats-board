@@ -2,19 +2,9 @@
 @import "assets/style/mixins";
 
 .page-speed {
-  display: flex;
-  width: 100%;
-  padding: 10px 35px;
-  flex-direction: column;
-
-  .heading {
-    margin: 40px 0;
-  }
-
   .performance-results {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
 
     .performance-results-toolbar {
       display: flex;
@@ -32,38 +22,42 @@
     }
 
     .performance-score {
-      display: flex;
-      justify-content: center;
-      padding: 20px 0;
-      flex-direction: column;
-      align-items: center;
+      .performance-score-card {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        padding: 1.725rem 1.25rem;
 
-      h2 {
-        font-size: 3.3em;
-        width: 70px;
-        height: 70px;
+        h2 {
+          font-size: 3.3em;
+          width: 110px;
+          height: 110px;
+        }
+      }
+
+      .performance-score-cta-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.725rem 1.25rem;
+
+        button {
+          margin: 1rem 0;
+          max-width: 12rem;
+        }
       }
     }
 
     .metrics-container {
       margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
 
       .metrics-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 200px;
-        width: 100%;
-        margin: 15px 20px 15px 0;
         padding: 30px;
-
-        @include media-breakpoint-desktop {
-          width: 22.5%;
-        }
 
         .metrics-data-point {
           font-size: 3em;
@@ -79,6 +73,17 @@
           background: $color-surface-red-transparent;
         }
       }
+    }
+  }
+
+  .performance-history {
+    margin-top: 40px;
+
+    h3 {
+      margin: 30px 0;
+    }
+    .performance-history-chart {
+      padding: 50px;
     }
   }
 }

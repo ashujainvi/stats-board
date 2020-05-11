@@ -1,5 +1,4 @@
 // Mobile-first Media Queries
-
 @mixin media-breakpoint-tablet {
   @media only screen and (min-width: $media-breakpoint-tablet) {
     @content;
@@ -8,6 +7,13 @@
 
 @mixin media-breakpoint-desktop {
   @media only screen and (min-width: $media-breakpoint-desktop) {
+    @content;
+  }
+}
+
+// desktop first media queries for grids
+@mixin media-breakpoint-mobile {
+  @media only screen and (max-width: $media-breakpoint-tablet) {
     @content;
   }
 }

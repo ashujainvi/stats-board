@@ -1,12 +1,17 @@
 @import "assets/style/variables";
+@import "assets/style/mixins";
 
 .header {
-  height: 60px;
-  padding: 25px 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 120px;
+  padding: 10px 20px;
+
+  @include media-breakpoint-desktop {
+    padding: 20px 50px;
+  }
 
   .app-logo {
     width: 65px;

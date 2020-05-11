@@ -1,0 +1,53 @@
+// GRID CONTENT
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding: 1.875rem 1.75rem;
+}
+
+// variables for grid
+$gutter-padding: 0.75rem;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -($gutter-padding);
+  margin-left: -($gutter-padding);
+}
+
+.grid-card-4,
+.grid-card-8 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0 $gutter-padding;
+
+  > div {
+    width: 100%;
+  }
+}
+
+.grid-card-4 {
+  @include media-breakpoint-tablet {
+    flex: 0 0 33.33333%;
+    max-width: 33.3333%;
+  }
+}
+
+.grid-card-8 {
+  @include media-breakpoint-tablet {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+}
+
+.grid-card-mobile-6 {
+  @include media-breakpoint-mobile {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+.grid-margin-bottom {
+  margin-bottom: 1.5rem;
+}

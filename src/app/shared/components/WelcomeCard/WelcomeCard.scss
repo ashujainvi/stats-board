@@ -1,13 +1,12 @@
 @import "assets/style/variables";
 
 .welcome-card {
-  background: $color-gradient-gray;
+  background: $color-gradient-red;
   display: flex;
-  width: 85%;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
 
-  .content {
-    padding: 50px;
+  &-image {
+    margin-right: 1rem;
   }
 }

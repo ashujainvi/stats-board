@@ -1,15 +1,22 @@
 @import "./variables";
 @import "./mixins";
 
+html {
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: none;
+  box-sizing: border-box;
 }
-
-html {
-  overflow-x: hidden;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -18,9 +25,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $color-background-primary-dark;
+  background: $color-background-primary-900AA;
   color: $color-text-primary;
-  font-size: 14px;
+  font-size: 1rem;
 }
 // Links
 a {
@@ -44,7 +51,8 @@ h2,
 h3 {
   font-weight: 800;
   color: $color-text-primary;
-  margin: 5px 0;
+  margin: 1rem 0;
+  line-height: 1.2;
 }
 
 h4,
@@ -52,45 +60,43 @@ h5,
 h6 {
   letter-spacing: -0.4px;
   font-weight: 700;
-  margin: 5px 0;
+  margin: 0.25rem 0;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2rem;
   letter-spacing: -0.55px;
-  margin: 10px 0;
 
   @include media-breakpoint-tablet {
-    font-size: 2.8em;
+    font-size: 2.8rem;
   }
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.875rem;
   letter-spacing: -0.5px;
-  margin: 10px 0;
 }
 
 h3 {
-  font-size: 1.52em;
+  font-size: 1.5rem;
   letter-spacing: -0.4px;
-  margin: 5px 0;
 }
 
 h4 {
-  font-size: 1.35em;
+  font-size: 1.125rem;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.125rem;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 p {
-  font-size: 1.05em;
-  margin: 5px 0;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
   color: $color-text-primary;
 }
 
@@ -112,7 +118,7 @@ input {
   background-color: $color-surface-primary-light;
   color: $color-text-primary;
   margin: 8px 0;
-  font-size: inherit;
+  font-size: 0.875rem;
   border-radius: 4px;
 
   &:focus {
@@ -126,10 +132,11 @@ button {
   -moz-appearance: none;
 }
 .button {
-  padding: 1rem 2rem;
+  padding: 1rem 1.75rem;
   color: $color-text-primary;
-  transition: all 0.1s ease;
-  border-radius: 4px;
+  transition: all 0.25s ease;
+  border-radius: 6px;
+  font-weight: $font-weight-semi-bold;
 
   &:hover {
     cursor: pointer;
@@ -146,12 +153,26 @@ button {
 
 .button-primary {
   background: $color-button-primary;
-  font-size: 1.1em;
+  font-size: 0.75rem;
 }
 
 .button-secondary {
-  background: $color-button-secondary;
-  font-size: 1em;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  font-weight: $font-weight-semi-bold;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+    background: $color-surface-inverse;
+    color: $color-text-primary-inverse;
+  }
+}
+
+// FONT CLASSES
+.font-muted {
+  color: $color-text-primary-muted;
 }
 
 // COLOR CLASSES
@@ -167,7 +188,11 @@ button {
   border-radius: 14px;
   box-shadow: $box-shadow-primary;
   background: $color-surface-primary;
-  padding: 10px;
+  padding: 0.5rem;
+
+  .card-body {
+    padding: 1.75rem 1.5625rem;
+  }
 }
 
 .card-circle-red {
@@ -192,6 +217,18 @@ button {
   padding: 15px;
   border: 5px solid $color-light-green-600;
   background: $color-surface-green-transparent;
+}
+
+.background-surface-green {
+  background: $color-surface-green;
+}
+
+.background-surface-theme {
+  background: $color-surface-primary-theme;
+}
+
+.background-surface-blue {
+  background: $color-surface-blue;
 }
 
 // ERRORS

@@ -21,7 +21,7 @@ class Hero extends React.Component {
           <button className="button button-primary">Get Started</button>
         </Link>
         <a
-          className="attribution"
+          className="attribution font-muted"
           href="https://www.freepik.com/free-photos-vectors/Background"
         >
           Background vector created by brgfx - www.freepik.com

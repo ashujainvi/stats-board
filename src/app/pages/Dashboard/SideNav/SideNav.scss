@@ -2,18 +2,18 @@
 @import "assets/style/mixins";
 
 .side-nav {
+  display: none;
   height: 100vh;
   position: sticky;
   top: 0;
   left: 0;
-  width: 210px;
-  padding: 0 25px;
-  display: flex;
+  min-width: 200px;
   flex-direction: column;
   background: $color-surface-primary;
 
-  @include media-breakpoint-tablet {
-    width: 280px;
+  @include media-breakpoint-desktop {
+    display: flex;
+    width: 260px;
   }
   .app-logo {
     width: 60px;
@@ -22,29 +22,30 @@
     display: inline-block;
   }
 
-  .nav-item-container {
+  .nav-items {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
-    padding: 20px 0;
+    padding: 1rem 0;
 
     .nav-item {
-      margin: 8px 0;
-      padding: 15px;
-      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-right: 1rem;
+      border-radius: 0 1rem 1rem 0;
+      font-size: 0.9175rem;
       background: $color-surface-primary;
+      transition: all 0.2s ease-in;
+      color: $color-text-primary;
 
       &:hover {
-        filter: brightness(150%);
+        background: $color-surface-primary-dark;
+        color: $color-text-primary-theme;
       }
 
       &-active {
         background: $color-surface-primary-dark;
         color: $color-text-red;
-
-        &:hover {
-          filter: none;
-        }
+        border-left: 3px solid $color-surface-primary-theme;
       }
     }
   }

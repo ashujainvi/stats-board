@@ -15,6 +15,7 @@ $color-red-700a: #db2e3485;
 // green
 $color-light-green-100: #b1ecd1;
 $color-light-green-300: #06d294;
+$color-light-green-500: #00d25b;
 $color-light-green-600: #00ab5c;
 $color-light-green-600a: #04b36176;
 // yellow
@@ -28,13 +29,16 @@ $color-pink-600: #b90075;
 // others
 $color-blue-900a: #100d32cf;
 $color-blue-900: #0a0c27;
+$color-blue-800: #1b1d34;
+$color-blue-300: #6c7293;
 $color-purple: #5d26b6;
 $color-orange: #fda085;
 
 // neutral colors
 $color-black: #050505;
 $color-neutral-900Aa: #101218cb;
-$color-neutral-900A: #101418;
+$color-neutral-900AA: #07080b;
+$color-neutral-900A: #0d1013;
 $color-neutral-900B: #12181c;
 $color-neutral-900C: #13191d;
 $color-neutral-800: #2d3137;
@@ -58,27 +62,33 @@ $color-secondary-light: $color-light-blue-300;
 $color-secondary-dark: $color-light-blue-700;
 
 // BACKGROUND & SURFACE COLORS
-$color-background-primary-dark: $color-neutral-900A;
+$color-background-primary-900AA: $color-neutral-900AA;
+$color-background-primary-900A: $color-neutral-900A;
 $color-background-primary: $color-neutral-900B;
+$color-backgrouns-primary-theme: $color-primary;
 $color-surface-primary-dark: $color-neutral-900A;
 $color-surface-primary: $color-neutral-900B;
 $color-surface-primary-light: $color-neutral-900C;
+$color-surface-inverse: $color-neutral-300;
+// vivid colors
+$color-surface-primary-theme: $color-primary;
 $color-surface-blue: $color-light-blue-700;
 $color-surface-red-transparent: $color-red-300a;
 $color-surface-green-transparent: $color-light-green-600a;
+$color-surface-green: $color-light-green-600;
 // error
 $color-surface-error: $color-red-300a;
 
 // GRADIENT COLORS
 $color-gradient-red: linear-gradient(
-  240deg,
-  $color-red-500 0%,
-  $color-red-700 80%
+  120deg,
+  $color-red-700 0%,
+  $color-red-500 80%
 );
 $color-gradient-blue: linear-gradient(
   240deg,
   $color-light-blue-500 0%,
-  $color-light-blue-700 80%
+  $color-light-blue-700 100%
 );
 $color-gradient-gray: linear-gradient(
   120deg,
@@ -93,9 +103,12 @@ $foreground-gradient-red: linear-gradient(
 );
 
 // ON (TEXT) COLORS
-$color-text-primary: $color-neutral-300;
-$color-text-primary-dark: $color-neutral-200;
+$color-text-primary: $color-neutral-200;
+$color-text-primary-600: $color-neutral-600;
+$color-text-primary-inverse: $color-neutral-900B;
+$color-text-primary-muted: $color-blue-300;
 $color-text-light-blue: $color-light-blue-500;
+$color-text-primary-theme: $color-primary;
 $color-text-red: $color-primary;
 
 // ELEMENTS COLORS (only use color variables)
@@ -109,12 +122,18 @@ $color-input-outline: $color-primary-light;
 $font-family-primary: "Manrope";
 $font-family-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
 
+// FONT WEIGHTS
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
 // BOX CONTENTS
 $container-max-width: 1100px;
 
 // BREAKPOINTS
-$media-breakpoint-tablet: 767px;
-$media-breakpoint-desktop: 992px;
+$media-breakpoint-tablet: 768px;
+$media-breakpoint-desktop: 1025px;
 
 // BOX SHADOW
 $box-shadow-primary: 0 20px 30px -10px $color-neutral-900Aa;

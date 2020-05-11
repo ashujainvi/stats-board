@@ -12,7 +12,7 @@ class SideNav extends React.Component {
           <img src={logo} className="app-logo" alt="stats board logo" />
         </Link>
 
-        <div className="nav-item-container">
+        <div className="nav-items">
           <NavLink
             to="/dashboard/overview"
             className="nav-item"

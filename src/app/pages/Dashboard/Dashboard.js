@@ -19,13 +19,13 @@ class Dashboard extends React.Component {
             {/* overview page is default view for dashboard */}
             <Redirect to={`${path}/overview`} />
           </Route>
-          <Route path={`${path}/overview`}>
+          <Route exact path={`${path}/overview`}>
             <Overview />
           </Route>
-          <Route path={`${path}/analytics`}>
+          <Route exact path={`${path}/analytics`}>
             <Analytics />
           </Route>
-          <Route path={`${path}/pagespeed`}>
+          <Route exact path={`${path}/pagespeed`}>
             <PageSpeed />
           </Route>
         </Switch>
