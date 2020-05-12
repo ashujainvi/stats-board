@@ -6,21 +6,6 @@
     display: flex;
     flex-direction: column;
 
-    .performance-results-toolbar {
-      display: flex;
-      flex-direction: row;
-      margin: 5px;
-
-      .color-classification {
-        display: flex;
-        flex-direction: row;
-
-        p {
-          margin-right: 5px;
-        }
-      }
-    }
-
     .performance-score {
       .performance-score-card {
         display: flex;
@@ -38,14 +23,10 @@
       }
 
       .performance-score-cta-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         padding: 1.725rem 1.25rem;
 
         button {
           margin: 1rem 0;
-          max-width: 12rem;
         }
       }
     }

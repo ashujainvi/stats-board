@@ -3,4 +3,12 @@
 
 .dashboard {
   display: flex;
+
+  .dashboard-body {
+    width: 100%;
+
+    @include media-breakpoint-desktop {
+      width: calc(100% - #{$sidebar-width});
+    }
+  }
 }

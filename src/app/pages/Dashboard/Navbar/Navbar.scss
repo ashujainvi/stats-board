@@ -1,0 +1,53 @@
+@import "assets/style/variables";
+@import "assets/style/mixins";
+
+.navbar {
+  display: flex;
+  height: $navbar-height;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $color-surface-primary;
+  padding: 10px;
+
+  .app-logo {
+    width: 45px;
+    pointer-events: none;
+    display: inline-block;
+
+    @include media-breakpoint-desktop {
+      display: none;
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+
+    .nav-item {
+      padding: 0.75rem 1rem;
+      margin-right: 1rem;
+      font-size: 0.9175rem;
+      background: $color-surface-primary;
+      transition: all 0.2s ease-in;
+      color: $color-text-primary;
+
+      &:hover {
+        background: $color-surface-primary-dark;
+        color: $color-text-primary-theme;
+      }
+
+      &-active {
+        background: $color-surface-primary-dark;
+        color: $color-text-red;
+        border-left: 3px solid $color-surface-primary-theme;
+      }
+    }
+  }
+}

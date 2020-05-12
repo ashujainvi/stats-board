@@ -1,25 +1,36 @@
 @import "assets/style/variables";
 @import "assets/style/mixins";
 
-.side-nav {
-  display: none;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  left: 0;
-  min-width: 200px;
+.sidebar {
+  display: flex;
+  position: fixed;
   flex-direction: column;
+  top: $navbar-height;
+  right: -($sidebar-width);
+  height: calc(100vh - #{$navbar-height});
+  width: $sidebar-width;
   background: $color-surface-primary;
+  z-index: 1;
+  transition: all 0.25s ease-out;
+
+  &-active {
+    right: 0;
+  }
 
   @include media-breakpoint-desktop {
-    display: flex;
-    width: 260px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
   .app-logo {
-    width: 60px;
+    width: 50px;
     pointer-events: none;
-    margin: 30px 10px 0;
-    display: inline-block;
+    margin: 20px 10px 0;
+    display: none;
+
+    @include media-breakpoint-desktop {
+      display: inline-block;
+    }
   }
 
   .nav-items {

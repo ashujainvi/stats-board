@@ -107,6 +107,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   border: 1px solid $color-input-outline;
+  background-color: $color-surface-primary-light;
   -webkit-box-shadow: 0 0 0 30px $color-surface-primary-light inset !important;
 }
 /*Change text in autofill textbox*/
@@ -132,17 +133,12 @@ button {
   -moz-appearance: none;
 }
 .button {
-  padding: 1rem 1.75rem;
+  padding: 0.875rem 1.5rem;
   color: $color-text-primary;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   border-radius: 6px;
   font-weight: $font-weight-semi-bold;
-
-  &:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-    box-shadow: $box-shadow-primary;
-  }
+  cursor: pointer;
 
   &:disabled {
     cursor: not-allowed;
@@ -154,19 +150,23 @@ button {
 .button-primary {
   background: $color-button-primary;
   font-size: 0.75rem;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $box-shadow-primary;
+  }
 }
 
 .button-secondary {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid $color-primary;
   font-size: 0.75rem;
+  color: $color-text-primary-theme;
   font-weight: $font-weight-semi-bold;
 
   &:hover {
-    transform: none;
-    box-shadow: none;
-    background: $color-surface-inverse;
-    color: $color-text-primary-inverse;
+    background: $color-surface-primary-theme;
+    color: $color-text-primary;
   }
 }
 
@@ -231,6 +231,9 @@ button {
   background: $color-surface-blue;
 }
 
+.background-surface-yellow {
+  background: $color-surface-yellow;
+}
 // ERRORS
 .server-error {
   display: flex;

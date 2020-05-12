@@ -1,10 +1,11 @@
 // GRID CONTENT
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
   width: 100%;
-  padding: 1.875rem 1.75rem;
+  padding: 1rem 1rem;
+
+  @include media-breakpoint-desktop {
+    padding: 1.875rem 1.75rem;
+  }
 }
 
 // variables for grid

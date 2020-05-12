@@ -20,8 +20,9 @@ $color-light-green-600: #00ab5c;
 $color-light-green-600a: #04b36176;
 // yellow
 $color-yellow-400: #ffe852;
-$color-yello-600: #ffd231; // main
+$color-yellow-600: #ffd231; // main
 $color-yellow-700: #fdbc2b;
+$color-yellow-800: #f0ae21;
 // pink
 $color-pink-200: #db89be;
 $color-pink-400: #cc3590; // main
@@ -40,8 +41,8 @@ $color-neutral-900Aa: #101218cb;
 $color-neutral-900AA: #07080b;
 $color-neutral-900A: #0d1013;
 $color-neutral-900B: #12181c;
-$color-neutral-900C: #13191d;
-$color-neutral-800: #2d3137;
+$color-neutral-900C: #141b1f;
+$color-neutral-800: #1e2329;
 $color-neutral-700: #545c63;
 $color-neutral-600: #6b7580;
 $color-neutral-500: #8e99a7;
@@ -68,7 +69,7 @@ $color-background-primary: $color-neutral-900B;
 $color-backgrouns-primary-theme: $color-primary;
 $color-surface-primary-dark: $color-neutral-900A;
 $color-surface-primary: $color-neutral-900B;
-$color-surface-primary-light: $color-neutral-900C;
+$color-surface-primary-light: $color-neutral-800;
 $color-surface-inverse: $color-neutral-300;
 // vivid colors
 $color-surface-primary-theme: $color-primary;
@@ -76,6 +77,7 @@ $color-surface-blue: $color-light-blue-700;
 $color-surface-red-transparent: $color-red-300a;
 $color-surface-green-transparent: $color-light-green-600a;
 $color-surface-green: $color-light-green-600;
+$color-surface-yellow: $color-yellow-800;
 // error
 $color-surface-error: $color-red-300a;
 
@@ -137,3 +139,7 @@ $media-breakpoint-desktop: 1025px;
 
 // BOX SHADOW
 $box-shadow-primary: 0 20px 30px -10px $color-neutral-900Aa;
+
+// WIDTH AND PADDING VARIABLES
+$navbar-height: 70px;
+$sidebar-width: 244px;

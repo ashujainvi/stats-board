@@ -13,7 +13,7 @@ import ErrorCard from "app/shared/components/ErrorCard/ErrorCard";
 import bgImage from "assets/images/login-background.jpg";
 // services & context
 import { loginHttp } from "app/shared/services/common-http";
-import Axios from "axios";
+
 class Login extends React.Component {
   constructor() {
     super();

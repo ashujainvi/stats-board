@@ -42,7 +42,7 @@ class PageSpeed extends React.Component {
         />
         <PerformanceResults isLoading={isLoading} data={data} />
         {/* <PerformanceComparisionChart /> */}
-        <PerformanceHistoryChart isLoading={isLoading} data={data} />
+        {/* <PerformanceHistoryChart isLoading={isLoading} data={data} /> */}
       </div>
     );
   }
@@ -54,21 +54,6 @@ function PerformanceResults({ isLoading, data }) {
       <h3>Performance Results</h3>
       {/* <SectionToolbar /> */}
       {isLoading ? <AuditingLoader /> : <LighthouseMetricsComp data={data} />}
-    </div>
-  );
-}
-
-function SectionToolbar() {
-  return (
-    <div className="performance-results-toolbar">
-      <p>
-        Last Audit: <span className="color-red">Just now</span>
-      </p>
-      <div className="color-classification">
-        <p>0-49 Red</p>
-        <p>50-89 Orange</p>
-        <p>90-100 Green</p>
-      </div>
     </div>
   );
 }
@@ -111,7 +96,7 @@ function LighthouseMetricsComp({ data }) {
         </div>
 
         <div className="grid-card-4 grid-margin-bottom">
-          <div className="card performance-score-cta-card background-surface-green">
+          <div className="card performance-score-cta-card">
             <h6>Analysis</h6>
             <p>You haven't ran analysis in a long time.</p>
             <p>Last analysis - May 3rd, 1999</p>
@@ -130,9 +115,6 @@ function AuditingLoader() {
 }
 
 function PerformanceHistoryChart({ isLoading, data }) {
-  // if (isLoading) return null;
-  // const apiData = data;
-
   const chartData = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday"],
     datasets: [
