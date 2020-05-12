@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./Sidebar.scss";
 import logo from "assets/images/logo.svg";
 import LoginControl from "app/shared/components/LoginControl/LoginControl";
@@ -22,6 +24,7 @@ const Sidebar = ({ isActive }) => {
           className="nav-item"
           activeClassName="nav-item-active"
         >
+          <FontAwesomeIcon className="icon" icon="tachometer-alt" />
           Overview
         </NavLink>
         <NavLink
@@ -29,6 +32,7 @@ const Sidebar = ({ isActive }) => {
           className="nav-item"
           activeClassName="nav-item-active"
         >
+          <FontAwesomeIcon className="icon" icon="chart-line" />
           Analytics
         </NavLink>
         <NavLink
@@ -36,6 +40,7 @@ const Sidebar = ({ isActive }) => {
           className="nav-item"
           activeClassName="nav-item-active"
         >
+          <FontAwesomeIcon className="icon" icon="desktop" />
           Page Speed
         </NavLink>
       </div>

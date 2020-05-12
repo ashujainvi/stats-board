@@ -29,8 +29,8 @@
   }
 
   .hero-intro {
-    font-size: 0.8em;
-    letter-spacing: 0.5em;
+    font-size: 0.5rem;
+    letter-spacing: 0.5rem;
     text-transform: uppercase;
     margin: 10px 0;
   }
@@ -41,8 +41,7 @@
   p {
     max-width: calc(75% + 10px);
     margin: 5px auto;
-    line-height: 34px;
-    font-size: 16px;
+    line-height: 1.5rem;
   }
 
   button {

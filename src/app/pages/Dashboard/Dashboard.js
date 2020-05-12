@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
   }
 
   sidenavToggleHandler = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     this.setState((prevState) => {
       return { isSidebarActive: !prevState.isSidebarActive };
     });

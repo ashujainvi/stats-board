@@ -20,9 +20,14 @@ import Dashboard from "app/pages/Dashboard/Dashboard";
 import { isUserAuthenticated } from "app/shared/services/utils";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faArchway } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTachometerAlt,
+  faTeeth,
+  faDesktop,
+  faChartLine,
+} from "@fortawesome/free-solid-svg-icons";
 // add icons to library
-library.add(faArchway);
+library.add(faTachometerAlt, faChartLine, faDesktop, faTeeth);
 
 class App extends React.Component {
   componentDidMount() {
