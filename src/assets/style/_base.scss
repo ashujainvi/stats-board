@@ -108,7 +108,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   border: 1px solid $color-input-outline;
   background-color: $color-surface-primary-light;
-  -webkit-box-shadow: 0 0 0 30px $color-surface-primary-light inset !important;
 }
 /*Change text in autofill textbox*/
 input:-webkit-autofill {

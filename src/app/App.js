@@ -18,6 +18,11 @@ import Signup from "app/pages/Signup/Signup";
 import Dashboard from "app/pages/Dashboard/Dashboard";
 // services
 import { isUserAuthenticated } from "app/shared/services/utils";
+// Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faArchway } from "@fortawesome/free-solid-svg-icons";
+// add icons to library
+library.add(faArchway);
 
 class App extends React.Component {
   componentDidMount() {
