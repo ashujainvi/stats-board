@@ -4,10 +4,12 @@ import "./SidebarToggleButton.scss";
 
 const SidebarToggleButton = (props) => {
   const [isActive, setActive] = useState(false);
+  //   let teethString = "teeth";
 
   const onButtonClick = () => {
     setActive(!isActive);
     props.click();
+    // teethString = isActive ? "teethOpen" : "teeth";
   };
 
   return (
@@ -16,7 +18,7 @@ const SidebarToggleButton = (props) => {
       className="button sidebar-toggle-button"
       onClick={() => onButtonClick()}
     >
-      <FontAwesomeIcon icon="teeth" />
+      <FontAwesomeIcon icon={isActive ? "teeth-open" : "teeth"} />
     </button>
   );
 };

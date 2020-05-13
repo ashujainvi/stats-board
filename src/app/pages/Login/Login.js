@@ -73,7 +73,7 @@ class Login extends React.Component {
         </div>
         <Canvas />
         <form noValidate className="card login-form">
-          <h2>Login to you account</h2>
+          <h3>Login to you account</h3>
           <p>Use your email to login</p>
           {error.error ? <ErrorCard error={error} /> : null}
           <input

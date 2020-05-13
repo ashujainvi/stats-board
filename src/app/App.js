@@ -21,13 +21,14 @@ import { isUserAuthenticated } from "app/shared/services/utils";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
+  faChartLine,
+  faDesktop,
   faTachometerAlt,
   faTeeth,
-  faDesktop,
-  faChartLine,
+  faTeethOpen,
 } from "@fortawesome/free-solid-svg-icons";
 // add icons to library
-library.add(faTachometerAlt, faChartLine, faDesktop, faTeeth);
+library.add(faChartLine, faDesktop, faTachometerAlt, faTeeth, faTeethOpen);
 
 class App extends React.Component {
   componentDidMount() {

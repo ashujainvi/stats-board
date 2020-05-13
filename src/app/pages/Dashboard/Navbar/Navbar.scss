@@ -10,6 +10,7 @@
   left: 0;
   background: $color-surface-primary;
   padding: 10px;
+  z-index: $z-index-navbar;
 
   .app-logo {
     width: 45px;

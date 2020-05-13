@@ -106,8 +106,13 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  border: 1px solid $color-input-outline;
   background-color: $color-surface-primary-light;
+  -webkit-box-shadow: 0 0 0 30px $color-surface-primary-light inset !important;
+}
+
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: 1px solid $color-input-outline;
 }
 /*Change text in autofill textbox*/
 input:-webkit-autofill {
@@ -118,7 +123,7 @@ input {
   background-color: $color-surface-primary-light;
   color: $color-text-primary;
   margin: 8px 0;
-  font-size: 0.875rem;
+  font-size: initial;
   border-radius: 4px;
 
   &:focus {
